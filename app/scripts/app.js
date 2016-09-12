@@ -178,9 +178,8 @@ angular.module('confusionApp', [])
 
     $scope.submitComment = function() {
       // Push into the dish's comment array
-      console.log($scope.rating);
       $scope.dish.comments.push(
-        {rating: $scope.rating, comment: $scope.comment,
+        {rating: parseInt($scope.rating), comment: $scope.comment,
          author: $scope.author, date: new Date().toISOString()}
        );
 
